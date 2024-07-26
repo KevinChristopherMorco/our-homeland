@@ -15,6 +15,7 @@ const CardContainer = () => {
     (async () => {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
+        console.log(response);
         const sort = response.data.sort((a, b) =>
           a.name.common.localeCompare(b.name.common)
         );
@@ -28,13 +29,13 @@ const CardContainer = () => {
   return (
     <div className="mt-[20vh] flex flex-col gap-y-20 xl:mt-[30vh]">
       <div className="px-6 flex items-center relative md:w-4/5 xl:w-1/2">
-        <div className="flex items-center absolute left-10 top-[50%] -translate-y-[50%] text-lg text-[var(--text-color)]">
+        <div className="flex items-center absolute left-10 top-[50%] -translate-y-[50%] text-lg text-[var(--text-color)] cursor-pointer">
           <ion-icon name="search-outline"></ion-icon>
         </div>
         <input
           type="search"
           placeholder="Search for a country..."
-          className="w-full p-6 px-10 bg-[var(--secondary-color)] text-[var(--text-color)]"
+          className="w-full p-6 px-10 bg-[var(--secondary-color)] text-[var(--text-color)] cursor-pointer"
         />
       </div>
       <div className="w-2/3 px-6 cursor-pointer md:w-1/2 xl:w-1/3 ">

@@ -1,8 +1,14 @@
 import React from "react";
 
-const Card = ({ name, capital, population, region, flag }) => {
+const Card = ({ name, capital, population, region, flag, handleCardRoute }) => {
+  const handleCardRoutes = () => {
+    console.log(name);
+  };
   return (
-    <div className="min-h-[20vh] w-full flex flex-col bg-[var(--secondary-color)] gap-y-10 rounded-lg cursor-pointer transition-transform ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 md:w-2/5 xl:w-[25%] md:min-h-[55vh]">
+    <div
+      className="min-h-[20vh] w-full flex flex-col bg-[var(--secondary-color)] gap-y-10 rounded-lg cursor-pointer transition-transform ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 md:w-2/5 xl:w-[25%] md:min-h-[55vh]"
+      onClick={handleCardRoutes}
+    >
       <div>
         <img src={flag} alt="Country" className="h-52 w-full rounded-lg" />
       </div>
