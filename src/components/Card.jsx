@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ name, capital, population, region, flag, handleCardRoute }) => {
+const Card = ({ name, capital, population, region, flag, code }) => {
   const handleCardRoutes = () => {
-    console.log(name);
+    <Link to={`/${name}`} />;
   };
   return (
-    <div
-      className="min-h-[20vh] w-full flex flex-col bg-[var(--secondary-color)] gap-y-10 rounded-lg cursor-pointer transition-transform ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 md:w-2/5 xl:w-[25%] md:min-h-[55vh]"
-      onClick={handleCardRoutes}
+    <Link
+      to={code}
+      className="min-h-[20vh] w-full flex flex-col bg-[var(--secondary-color)] gap-y-10 rounded-lg cursor-pointer transition-transform ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 md:min-h-[15vh] md:w-2/5 xl:w-[25%] 2xl:w-[20%]"
     >
       <div>
         <img src={flag} alt="Country" className="h-52 w-full rounded-lg" />
@@ -27,7 +28,7 @@ const Card = ({ name, capital, population, region, flag, handleCardRoute }) => {
           <span className="font-medium">Capital:</span> {capital}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

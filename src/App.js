@@ -4,13 +4,18 @@ import "./App.css";
 import Header from "./components/Header";
 import CardContainer from "./components/containers/CardContainer";
 import CardInformation from "./components/CardInformation";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Header />
-      {/* <CardInformation /> */}
-      <CardContainer />
+      <Router>
+        <Routes>
+          <Route path="/*" element={<CardContainer />} />
+          <Route path="/:countryCode" element={<CardInformation />} />
+        </Routes>
+      </Router>
     </>
   );
 }
