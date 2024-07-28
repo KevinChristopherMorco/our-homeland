@@ -18,20 +18,20 @@ const Filters = ({ countries, checkFilter, setFilteredCountries }) => {
   };
 
   const handleSearch = async (event) => {
-    console.log(checkFilter);
     const { value } = event.target;
-    value ? checkFilter(true) : checkFilter(false);
     setSearch(value);
   };
 
   useEffect(() => {
-    setFilteredCountries(() =>
-      countries.filter(
+    setFilteredCountries(() => {
+      const filter = countries.filter(
         ({ name: { common: name }, region: countryRegion }) =>
           (region === "" || countryRegion === region) &&
           (search === "" || name.toLowerCase().includes(search.toLowerCase()))
-      )
-    );
+      );
+      filter ? checkFilter(true) : checkFilter(false);
+      return filter;
+    });
   }, [search, region]);
 
   return (

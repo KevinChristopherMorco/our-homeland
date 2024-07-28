@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({ name, capital, population, region, flag, code }) => {
-  const handleCardRoutes = () => {
-    <Link to={`/${name}`} />;
-  };
   return (
     <Link
       to={code}

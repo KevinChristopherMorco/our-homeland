@@ -3,7 +3,7 @@ import React from "react";
 const Loader = () => {
   return (
     <div className="w-[100%] min-h-[20vh] px-6 mt-[20vh] mx-auto md:w-[30%] xl:mt-[30vh] xl:w-[25%] 2xl:xl:w-[20%] ">
-      <div class="w-full flex justify-evenly items-center">
+      <div className="w-full flex justify-evenly items-center">
         <svg
           aria-hidden="true"
           className="w-8 h-8 text-[var(--text-color)] animate-spin fill-[var(--secondary-color)] lg:w-12 lg:h-12 "

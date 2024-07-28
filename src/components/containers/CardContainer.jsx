@@ -34,6 +34,8 @@ const CardContainer = () => {
     return <Loader />;
   }
 
+  console.log(filteredCountries.length);
+
   if (filteredCountries.length === 0 && filter) {
     return (
       <div className="mt-[20vh] flex flex-col gap-y-20 xl:mt-[30vh]">
@@ -54,7 +56,7 @@ const CardContainer = () => {
         checkFilter={checkFilter}
         setFilteredCountries={setFilteredCountries}
       />
-      <div className="px-6 flex flex-col items-center gap-y-20 md:flex-row md:flex-wrap md:justify-between xl:gap-x-4">
+      <div className="px-6 flex flex-col items-center gap-y-20 md:flex-row md:flex-wrap md:justify-between xl:justify-around xl:gap-x-4">
         {(filteredCountries.length !== 0 ? filteredCountries : countries).map(
           (country, index) => {
             if (!Boolean(country.capital)) country.capital = "N/A";

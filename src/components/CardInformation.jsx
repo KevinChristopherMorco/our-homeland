@@ -57,7 +57,7 @@ const CardInformation = () => {
           <img
             src={country.flag}
             alt=""
-            className="w-[100%] h-52 xl:h-[65%] xl:w-[80%] 2xl:h-[75%]"
+            className="w-[100%] h-52 xl:h-[65%] xl:w-[100%] 2xl:h-[75%]"
           />
         </div>
         <div className="flex flex-col gap-y-10 xl:basis-[50%] 2xl:basis-[40%]">
