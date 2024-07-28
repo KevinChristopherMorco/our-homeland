@@ -20,6 +20,7 @@ const Header = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     localStorage.setItem("themeToggle", JSON.stringify(themeToggle));
+    document.body.classList = "";
     document.body.classList.add(theme);
   }, [theme]);
 
