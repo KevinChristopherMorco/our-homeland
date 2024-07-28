@@ -38,7 +38,7 @@ const CardContainer = () => {
 
   if (filteredCountries.length === 0 && filter) {
     return (
-      <div className="mt-[20vh] flex flex-col gap-y-20 xl:mt-[30vh]">
+      <div className="mt-[20vh] flex flex-col gap-y-20 2xl:mt-[20vh]">
         <Filters
           countries={countries}
           checkFilter={checkFilter}
@@ -50,7 +50,7 @@ const CardContainer = () => {
   }
 
   return (
-    <div className="mt-[20vh] flex flex-col gap-y-20 xl:mt-[30vh] 2xl:mt-[20vh]">
+    <div className="mt-[20vh] flex flex-col gap-y-20 2xl:mt-[20vh]">
       <Filters
         countries={countries}
         checkFilter={checkFilter}

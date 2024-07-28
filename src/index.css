@@ -38,12 +38,16 @@
     font-family: "Lexend";
     src: local("MyFont"), url(./fonts/Lexend-Regular.ttf) format("ttf");
   }
+
+  html {
+    @apply h-full;
+  }
   body {
-    @apply bg-[var(--primary-color)] text-[var(--text-color)];
+    @apply h-full bg-[var(--primary-color)] text-[var(--text-color)];
   }
 
   #root {
-    @apply flex flex-col gap-y-10;
+    @apply min-h-full flex flex-col gap-y-10;
   }
 
   .darkMode {
